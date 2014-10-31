@@ -1,0 +1,17 @@
+Title Order filling
+
+Narrative:
+As a User
+I want Fill out an order
+So that Complete an order
+
+
+Scenario: Verify product balance
+Given Stock has 10 products
+When There's availability to sell 5 products
+Then Must return "true"
+
+Scenario: Order filled with success
+Given Stock has 10 products
+When I fill out an order with 3 products
+Then Order filling status must be returned as "true"
